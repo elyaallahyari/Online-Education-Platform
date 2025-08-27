@@ -1,0 +1,29 @@
+.PublicLayout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+    58.08deg,
+    #89cfe8 -11.48%,
+    #e8ebf3 53.54%,
+    #e8ebf3 57.19%,
+    #6682ed 114.92%
+  );
+}
+.mainLayout {
+  position: relative;
+  width: 97vw;
+  height: 95vh;
+  background: rgba(255, 255, 255, 0.48);
+  border-radius: 57px;
+}
+.content {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}

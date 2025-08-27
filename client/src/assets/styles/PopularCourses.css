@@ -1,0 +1,33 @@
+.card {
+  background-color: white;
+  padding: 5px;
+  width: 270px;
+  height: 209px;
+  border-radius: 17px;
+
+  .card__image {
+    img {
+      width: -webkit-fill-available;
+      border-radius: 17px;
+      width: 269px;
+      height: 132px;
+    }
+  }
+
+  .card__content {
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      color: #646464;
+      margin-top: -7px;
+    }
+    span {
+      color: #888888;
+      font-size: 12px;
+      font-weight: 200;
+    }
+  }
+}

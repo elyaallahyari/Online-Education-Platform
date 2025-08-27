@@ -1,0 +1,80 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem 2rem 0rem 2rem;
+
+  .head__title {
+    h1 {
+      color: #646464;
+      font-size: 7vh;
+
+      line-height: 9vh;
+      align-items: center;
+      width: min-content;
+      font-weight: 400;
+      position: absolute;
+      top: 8rem;
+      left: 4rem;
+    }
+  }
+
+  .head__banner {
+    img {
+      height: 55vh;
+      position: absolute;
+      top: 1rem;
+      right: 10rem;
+    }
+  }
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 14rem;
+  .foot__title {
+    p {
+      color: #646464;
+      font-weight: 500;
+      margin-left: 50px;
+      font-size: large;
+    }
+  }
+  .foot__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+  }
+  .foot__cards-more {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.754);
+    border: 1px solid #6682ed;
+    color: #6682ed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+
+.foot__cards-more:hover {
+  background-color: #6681ed;
+  color: white;
+  transition: 0.3s;
+}
