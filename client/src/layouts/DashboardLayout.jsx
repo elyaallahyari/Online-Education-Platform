@@ -12,7 +12,7 @@ const DashboardLayout = () => {
     <div>
       <PublicLayout>
         <Navbar
-          //   path_1={'/enter'}
+          path_1={'/enter'}
           logo_1={<IoLogIn />}
           item_1={'enter'}
           logo_2={<IoInvertMode />}
