@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8rem;
 }
 .head {
   display: flex;
@@ -15,7 +14,6 @@
     h1 {
       color: #646464;
       font-size: 7vh;
-
       line-height: 9vh;
       align-items: center;
       width: min-content;
@@ -30,8 +28,9 @@
     img {
       height: 55vh;
       position: absolute;
-      top: 1rem;
-      right: 10rem;
+      top: 1.5rem;
+      right: 3rem;
+      z-index: 1;
     }
   }
 }
@@ -40,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 14rem;
+  margin-top: 23rem;
   .foot__title {
     p {
       color: #646464;
@@ -55,6 +54,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px 0px 50px;
+    z-index: 2;
   }
   .foot__cards-more {
     width: 90px;

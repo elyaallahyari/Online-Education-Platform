@@ -6,11 +6,24 @@ import PopularCourses from '../components/PopularCorses'
 import Microsoft_Power_BI_Data_Analyst from '../assets/images/Microsoft-Power-BI-Data-Analyst.png'
 import Excel_skills_for_business from '../assets/images/Excel-skills-for-business.png'
 import IBM_Data_Science from '../assets/images/IBM-Data-Science.png'
+import Navbar from '../components/Navbar'
+import { FaSearch } from 'react-icons/fa'
+import { IoInvertMode } from 'react-icons/io5'
+import { IoLanguage } from 'react-icons/io5'
 const Home = () => {
   return (
     <>
       <PublicLayout>
         <div className="content">
+          <Navbar
+            logo_1={<FaSearch />}
+            item_1={'explore'}
+            logo_2={<IoInvertMode />}
+            item_2={'mode'}
+            logo_3={<IoLanguage />}
+            item_3={'lang'}
+          />
+
           <div className="head">
             <div className="head__title">
               <h1>Online Education Platform</h1>
