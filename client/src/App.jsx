@@ -1,10 +1,12 @@
 import React from 'react'
-import Home from './pages/Home'
+import { RouterProvider } from 'react-router-dom'
+import { RouteHandler } from './router/RouteHandler'
+import './assets/styles/app.css'
 
 const App = () => {
   return (
     <>
-      <Home />
+      <RouterProvider router={RouteHandler} />
     </>
   )
 }

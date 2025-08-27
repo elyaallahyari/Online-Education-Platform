@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #686868;
+  border-radius: 7px;
+  width: max-content;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+
+  .menu__icon {
+    display: contents;
+  }
+}
+
+.menu:hover {
+  color: white;
+  background-color: #6682ed;
+  transition: 0.3s;
+}
+
+.active {
+  color: white;
+  background-color: #6682ed;
+}

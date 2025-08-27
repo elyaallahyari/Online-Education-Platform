@@ -16,6 +16,7 @@ const Home = () => {
       <PublicLayout>
         <div className="content">
           <Navbar
+            path_1={'/dashboard'}
             logo_1={<FaSearch />}
             item_1={'explore'}
             logo_2={<IoInvertMode />}

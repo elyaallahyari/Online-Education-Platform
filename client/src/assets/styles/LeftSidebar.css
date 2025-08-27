@@ -1,0 +1,28 @@
+.sidebar {
+  width: 200px;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 57px 0px 0px 57px;
+  padding: 5rem 0rem 4rem 3rem;
+
+  .sidebar__logo {
+    color: #6682ed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 9.5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .sidebar__menu {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
