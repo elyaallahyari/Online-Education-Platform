@@ -25,8 +25,9 @@ const Login = () => {
     }
     try {
       const res = await axiosReq.post('/auth/login', loginData)
-      console.log(res.data.data)
       if (res) {
+        localStorage.setItem('token', res.data.data.token)
+        localStorage.setItem('user', JSON.stringify(res.data.data))
         Navigate('/dashboard')
       }
     } catch (err) {
@@ -52,7 +53,7 @@ const Login = () => {
 
             <form onSubmit={loginHandler}>
               <input
-                type="text"
+                type="email"
                 className="button"
                 placeholder="email"
                 name="email"
