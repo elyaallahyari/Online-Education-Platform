@@ -7,6 +7,8 @@ import Categories from '../pages/dashboard/Categories'
 import Exams from '../pages/dashboard/Exams'
 import About from '../pages/dashboard/About'
 import Enter from '../pages/auth/Enter'
+import Login from '../pages/auth/Login'
+import Register from '../pages/auth/Register'
 
 export const RouteHandler = createBrowserRouter([
   {
@@ -27,5 +29,13 @@ export const RouteHandler = createBrowserRouter([
   {
     path: '/enter',
     element: <Enter />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register />
   }
 ])

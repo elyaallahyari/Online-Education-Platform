@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import { IoLogIn } from 'react-icons/io5'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
-
+import '../assets/styles/DashboardLayout.css'
 const DashboardLayout = () => {
   return (
     <div>

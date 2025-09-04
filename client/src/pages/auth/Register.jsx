@@ -1,14 +1,13 @@
 import React from 'react'
 import PublicLayout from '../../layouts/PublicLayout'
-import Navbar from '../../components/Navbar'
 import Banner from '../../assets/images/site-banner.png'
-import '../../assets/styles/Enter.css'
+import Navbar from '../../components/Navbar'
 import { FaSearch } from 'react-icons/fa'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 
-const Enter = () => {
+const Register = () => {
   return (
     <>
       <PublicLayout>
@@ -23,14 +22,14 @@ const Enter = () => {
         />
         <div className="enter">
           <div className="enter__content">
-            <h3>Welcome to online education</h3>
+            <h3>Register</h3>
+
+            <input type="text" className="button" placeholder="full name" />
+            <input type="number" className="button" placeholder="age" />
+            <input type="text" className="button" placeholder="email" />
+            <input type="text" className="button" placeholder="password" />
             <div className="buttons">
-              <Link to={'/login'}>
-                <button className="buttons--primary button">Login</button>
-              </Link>
-              <Link to={'/register'}>
-                <button className="buttons--secondary button">Register</button>
-              </Link>
+              <button className="buttons--primary button">Register</button>
             </div>
           </div>
 
@@ -43,4 +42,4 @@ const Enter = () => {
   )
 }
 
-export default Enter
+export default Register

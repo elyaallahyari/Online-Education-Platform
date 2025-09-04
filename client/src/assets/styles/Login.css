@@ -1,0 +1,10 @@
+input{
+    text-indent: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

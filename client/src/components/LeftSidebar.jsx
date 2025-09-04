@@ -12,11 +12,6 @@ const LeftSidebar = () => {
   return (
     <>
       <div className="sidebar">
-        <div className="sidebar__logo">
-          <IoLogoSoundcloud size={'90'} />
-          <span>Platform</span>
-        </div>
-
         <div className="sidebar__menu">
           <SideMenuItem name={'Trending skills'} icon={<HiTrendingUp />} to={'trending'} />
           <SideMenuItem name={'Courses'} icon={<MdOutlinePlayLesson />} to={'courses'} />
