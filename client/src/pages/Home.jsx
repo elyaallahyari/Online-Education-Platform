@@ -7,7 +7,7 @@ import Microsoft_Power_BI_Data_Analyst from '../assets/images/Microsoft-Power-BI
 import Excel_skills_for_business from '../assets/images/Excel-skills-for-business.png'
 import IBM_Data_Science from '../assets/images/IBM-Data-Science.png'
 import Navbar from '../components/Navbar'
-import { FaSearch } from 'react-icons/fa'
+import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 const Home = () => {
@@ -16,13 +16,13 @@ const Home = () => {
       <PublicLayout>
         <div className="content">
           <Navbar
-            path_1={'/dashboard'}
-            logo_1={<FaSearch />}
-            item_1={'explore'}
-            logo_2={<IoInvertMode />}
-            item_2={'mode'}
-            logo_3={<IoLanguage />}
-            item_3={'lang'}
+            logo_1={<IoInvertMode />}
+            item_1={'mode'}
+            logo_2={<IoLanguage />}
+            item_2={'lang'}
+            path_3={'/dashboard'}
+            logo_3={<VscRemoteExplorer />}
+            item_3={'explore'}
           />
 
           <div className="head">

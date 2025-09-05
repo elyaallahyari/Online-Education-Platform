@@ -36,7 +36,8 @@
 
 .navbar__items {
   display: flex;
-  gap: 1rem;
+  gap: 0.4rem;
+  cursor: pointer;
 }
 
 .navbar__logo {

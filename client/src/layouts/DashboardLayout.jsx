@@ -8,17 +8,23 @@ import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import RightSidebar from '../components/RightSidebar'
 import Profile from '../assets/images/icons8-profile-100.png'
+import { RiArrowDownWideFill } from 'react-icons/ri'
+import { CgProfile } from 'react-icons/cg'
 import '../assets/styles/DashboardLayout.css'
 
 const DashboardLayout = () => {
   const [user, setUser] = useState({})
   const [isLoggedin, setIsLoggedin] = useState(false)
+  const [openSidebar, setOpenSidebar] = useState(false)
 
   const logoutHandler = () => {
-    localStorage.clear()
+    setOpenSidebar(false)
     setIsLoggedin(false)
+    localStorage.clear()
   }
-
+  const profileHandler = () => {
+    setOpenSidebar(!openSidebar)
+  }
   useEffect(() => {
     const storedUser = localStorage.getItem('user')
     if (storedUser) {
@@ -30,24 +36,23 @@ const DashboardLayout = () => {
     <div>
       <PublicLayout>
         <Navbar
-          path_1={'/enter'}
-          logo_1={<IoLogIn />}
-          item_1={'enter'}
-          logo_2={<IoInvertMode />}
-          item_2={'mode'}
-          logo_3={<IoLanguage />}
-          item_3={'lang'}
+          logo_1={<IoInvertMode />}
+          item_1={'mode'}
+          logo_2={<IoLanguage />}
+          item_2={'lang'}
+          path_3={!isLoggedin && '/enter'}
+          logo_3={isLoggedin ? <CgProfile onClick={profileHandler} /> : <IoLogIn />}
+          item_3={isLoggedin ? <RiArrowDownWideFill /> : 'enter'}
         />
         <LeftSidebar />
 
-        {isLoggedin && (
+        {openSidebar && (
           <RightSidebar
             profile={user?.profile || Profile}
             fullName={user?.fullName}
             email={user?.email}
             age={user?.age}
             onClick={logoutHandler}
-            style={{ visibility: isLoggedin ? 'visible' : 'hidden' }}
           />
         )}
 
