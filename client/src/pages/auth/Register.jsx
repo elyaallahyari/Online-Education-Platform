@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import PublicLayout from '../../layouts/PublicLayout'
 import Banner from '../../assets/images/site-banner.png'
 import Navbar from '../../components/Navbar'
-import { FaSearch } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
+import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
@@ -10,6 +11,8 @@ import { axiosReq } from '../../services/axios'
 
 const Register = () => {
   const Navigate = useNavigate()
+  const { t } = useTranslation()
+
   const [registerData, setRegisterData] = useState({
     email: '',
     password: '',
@@ -34,49 +37,49 @@ const Register = () => {
     <>
       <PublicLayout>
         <Navbar
-          path_1={'/dashboard'}
-          logo_1={<FaSearch />}
-          item_1={'explore'}
-          logo_2={<IoInvertMode />}
-          item_2={'mode'}
-          logo_3={<IoLanguage />}
-          item_3={'lang'}
+          logo_1={<IoInvertMode />}
+          item_1={t('navbar.mode')}
+          logo_2={<IoLanguage />}
+          item_2={'lang'}
+          path_3={'/dashboard'}
+          logo_3={<VscRemoteExplorer />}
+          item_3={t('navbar.explore')}
         />
         <div className="enter">
           <form className="enter__content" onSubmit={registerHandler}>
-            <h3>Register</h3>
+            <h3>{t('register.title')}</h3>
 
             <input
               type="text"
               className="button"
-              placeholder="full name"
+              placeholder={t('register.fullName')}
               name="fullName"
               onChange={inputHandler}
             />
             <input
               type="number"
               className="button"
-              placeholder="age"
+              placeholder={t('register.age')}
               name="age"
               onChange={inputHandler}
             />
             <input
               type="email"
               className="button"
-              placeholder="email"
+              placeholder={t('register.email')}
               name="email"
               onChange={inputHandler}
             />
             <input
               type="text"
               className="button"
-              placeholder="password"
+              placeholder={t('register.password')}
               name="password"
               onChange={inputHandler}
             />
             <div className="buttons">
               <button className="buttons--primary button" type="submit">
-                Register
+                {t('register.button')}
               </button>
             </div>
           </form>

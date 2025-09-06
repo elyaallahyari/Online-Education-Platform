@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import PublicLayout from '../../layouts/PublicLayout'
 import Banner from '../../assets/images/site-banner.png'
 import Navbar from '../../components/Navbar'
-import { FaSearch } from 'react-icons/fa'
+import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
@@ -12,6 +13,7 @@ import { axiosReq } from '../../services/axios'
 
 const Login = () => {
   const Navigate = useNavigate()
+  const { t } = useTranslation()
 
   const [loginData, setLoginData] = useState({ email: '', password: '' })
   const inputHandler = (e) => {
@@ -39,36 +41,36 @@ const Login = () => {
     <>
       <PublicLayout>
         <Navbar
-          path_1={'/dashboard'}
-          logo_1={<FaSearch />}
-          item_1={'explore'}
-          logo_2={<IoInvertMode />}
-          item_2={'mode'}
-          logo_3={<IoLanguage />}
-          item_3={'lang'}
+          logo_1={<IoInvertMode />}
+          item_1={t('navbar.mode')}
+          logo_2={<IoLanguage />}
+          item_2={'lang'}
+          path_3={'/dashboard'}
+          logo_3={<VscRemoteExplorer />}
+          item_3={t('navbar.explore')}
         />
         <div className="enter">
           <div className="enter__content">
-            <h3>Login</h3>
+            <h3>{t('login.title')}</h3>
 
             <form onSubmit={loginHandler}>
               <input
                 type="email"
                 className="button"
-                placeholder="email"
+                placeholder={t('login.email')}
                 name="email"
                 onChange={inputHandler}
               />
               <input
                 type="password"
                 className="button"
-                placeholder="password"
+                placeholder={t('login.password')}
                 name="password"
                 onChange={inputHandler}
               />
               <div className="buttons">
                 <button className="buttons--primary button" type="submit">
-                  Login
+                  {t('login.button')}
                 </button>
               </div>
             </form>

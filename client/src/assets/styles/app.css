@@ -5,9 +5,19 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'yekan';
 }
 ul,
 li {
   list-style-type: none;
+}
+@font-face {
+  font-family: 'yekan';
+  src: url('../fonts/YekanBakh-Regular.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'yekan';
+  src: url('../fonts/YekanBakh-SemiBold.woff') format('woff');
+  font-weight: 700;
 }

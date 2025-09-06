@@ -1,0 +1,45 @@
+{
+  "home": {
+    "title": "Online Education Platform",
+    "popular_courses": "Popular courses",
+    "more_btn": "Show more"
+  },
+  "navbar": {
+    "mode": "Mode",
+    "lang": "Language",
+    "explore": "Explore",
+    "enter": "Enter"
+  },
+  "leftـsidebar": {
+    "Trendingـskills": "Trending skills",
+    "Courses": "Courses",
+    "Categories": "Categories",
+    "Exams": "Exams",
+    "About_us": "About us"
+  },
+  "right_sidebar": {
+    "email": "email",
+    "age": "age",
+    "your_courses": "Your courses",
+    "logout": "Logout"
+  },
+  "enter": {
+    "welcome": "Welcome to online education",
+    "login": "Login",
+    "register": "Register"
+  },
+  "login": {
+    "title": "Login",
+    "email": "email",
+    "password": "password",
+    "button": "Login"
+  },
+  "register": {
+    "title": "Register",
+    "fullName": "full name",
+    "age": "age",
+    "email": "email",
+    "password": "password",
+    "button": "Register"
+  }
+}

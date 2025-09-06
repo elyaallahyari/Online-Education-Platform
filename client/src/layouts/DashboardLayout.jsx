@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import PublicLayout from './PublicLayout'
 import LeftSidebar from '../components/LeftSidebar'
 import Navbar from '../components/Navbar'
@@ -16,6 +17,8 @@ const DashboardLayout = () => {
   const [user, setUser] = useState({})
   const [isLoggedin, setIsLoggedin] = useState(false)
   const [openSidebar, setOpenSidebar] = useState(false)
+
+  const { t } = useTranslation()
 
   const logoutHandler = () => {
     setOpenSidebar(false)
@@ -37,12 +40,12 @@ const DashboardLayout = () => {
       <PublicLayout>
         <Navbar
           logo_1={<IoInvertMode />}
-          item_1={'mode'}
+          item_1={t('navbar.mode')}
           logo_2={<IoLanguage />}
-          item_2={'lang'}
+          item_2={t('navbar.lang')}
           path_3={!isLoggedin && '/enter'}
           logo_3={isLoggedin ? <CgProfile onClick={profileHandler} /> : <IoLogIn />}
-          item_3={isLoggedin ? <RiArrowDownWideFill /> : 'enter'}
+          item_3={isLoggedin ? <RiArrowDownWideFill /> : t('navbar.enter')}
         />
         <LeftSidebar />
 

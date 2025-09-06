@@ -7,27 +7,30 @@ import Microsoft_Power_BI_Data_Analyst from '../assets/images/Microsoft-Power-BI
 import Excel_skills_for_business from '../assets/images/Excel-skills-for-business.png'
 import IBM_Data_Science from '../assets/images/IBM-Data-Science.png'
 import Navbar from '../components/Navbar'
+import { useTranslation } from 'react-i18next'
 import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 const Home = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <PublicLayout>
         <div className="content">
           <Navbar
             logo_1={<IoInvertMode />}
-            item_1={'mode'}
+            item_1={t('navbar.mode')}
             logo_2={<IoLanguage />}
-            item_2={'lang'}
+            item_2={t('navbar.lang')}
             path_3={'/dashboard'}
             logo_3={<VscRemoteExplorer />}
-            item_3={'explore'}
+            item_3={t('navbar.explore')}
           />
 
           <div className="head">
             <div className="head__title">
-              <h1>Online Education Platform</h1>
+              <h1>{t('home.title')}</h1>
             </div>
             <div className="head__banner">
               <img src={Banner} alt="Banner of the site" />
@@ -36,7 +39,7 @@ const Home = () => {
 
           <div className="foot">
             <div className="foot__title">
-              <p>Popular courses</p>
+              <p>{t('home.popular_courses')}</p>
             </div>
 
             <div className="foot__cards">
@@ -59,7 +62,7 @@ const Home = () => {
               />
 
               <div className="foot__cards-moree">
-                <button className="foot__cards-more">Show more</button>
+                <button className="foot__cards-more">{t('home.more_btn')}</button>
               </div>
             </div>
           </div>

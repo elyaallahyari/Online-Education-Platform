@@ -1,0 +1,45 @@
+{
+  "home": {
+    "title": "پلتفرم آموزش آنلاین",
+    "popular_courses": "دوره های پرطرفدار",
+    "more_btn": "نمایش بیشتر"
+  },
+  "navbar": {
+    "mode": "حالت",
+    "lang": "زبان",
+    "explore": "کاوش",
+    "enter": "ورود"
+  },
+  "leftـsidebar": {
+    "Trendingـskills": "پرطرفدارترین مهارت‌ها",
+    "Courses": "دوره‌ها",
+    "Categories": "موضوع‌ها",
+    "Exams": "امتحان‌ها",
+    "About_us": "درمورد ما"
+  },
+  "right_sidebar": {
+    "email": "ایمیل",
+    "age": "سن",
+    "your_courses": "دوره های من",
+    "logout": "خروج"
+  },
+  "enter": {
+    "welcome": "به پلتفرم آنلاین خوش‌آمدید",
+    "login": "ورود",
+    "register": "ثبت نام"
+  },
+  "login": {
+    "title": "ورود",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "button": "ورود"
+  },
+  "register": {
+    "title": "ثبت نام",
+    "fullName": "نام کامل",
+    "age": "سن",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "button": "ثبت‌ نام"
+  }
+}

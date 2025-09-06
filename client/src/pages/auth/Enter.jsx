@@ -3,33 +3,36 @@ import PublicLayout from '../../layouts/PublicLayout'
 import Navbar from '../../components/Navbar'
 import Banner from '../../assets/images/site-banner.png'
 import '../../assets/styles/Enter.css'
-import { FaSearch } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
+import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 
 const Enter = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <PublicLayout>
         <Navbar
-          path_1={'/dashboard'}
-          logo_1={<FaSearch />}
-          item_1={'explore'}
-          logo_2={<IoInvertMode />}
-          item_2={'mode'}
-          logo_3={<IoLanguage />}
-          item_3={'lang'}
+          logo_1={<IoInvertMode />}
+          item_1={t('navbar.mode')}
+          logo_2={<IoLanguage />}
+          item_2={'lang'}
+          path_3={'/dashboard'}
+          logo_3={<VscRemoteExplorer />}
+          item_3={t('navbar.explore')}
         />
         <div className="enter">
           <div className="enter__content">
-            <h3>Welcome to online education</h3>
+            <h3>{t('enter.welcome')}</h3>
             <div className="buttons">
               <Link to={'/login'}>
-                <button className="buttons--primary button">Login</button>
+                <button className="buttons--primary button">{t('enter.login')}</button>
               </Link>
               <Link to={'/register'}>
-                <button className="buttons--secondary button">Register</button>
+                <button className="buttons--secondary button">{t('enter.register')}</button>
               </Link>
             </div>
           </div>
