@@ -1,53 +1,49 @@
 .enter {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: inherit;
   height: inherit;
   border-radius: inherit;
   padding-top: 4rem;
+}
 
-  .enter__banner {
-    img {
-      width: 40vw;
-      margin-right: 2rem;
-    }
-  }
+.enter__banner img {
+  width: 40vw;
+  margin-right: 2rem;
+}
 
-  .enter__content {
-    margin-left: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 22rem;
+.enter__content {
+  margin-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 22rem;
+}
 
-    h3 {
-      color: #686868;
-      font-size: 3rem;
-      font-weight: 400;
-    }
-  }
+.enter__content h3 {
+  color: var(--color-text-muted);
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 4rem;
-
-  .buttons--primary {
-    background-color: #6682ed;
-    color: white;
-  }
-  .buttons--secondary {
-    background-color: white;
-    color: #6682ed;
-  }
 }
+
+.buttons--primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.buttons--secondary {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
 .button {
   width: 247px;
   height: 47px;

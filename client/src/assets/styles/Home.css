@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   .head__title {
     h1 {
-      color: #646464;
+      color: var(--color-text);
       font-size: 7vh;
       line-height: 9vh;
       align-items: center;
@@ -31,7 +31,7 @@
 }
 
 .foot {
-  background-color: #ffffffb6;
+  background-color: var(--color-bg-transparent);
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   border-radius: 17px;
   .foot__title {
     p {
-      color: #646464;
+      color: var(--color-text);
       font-weight: 500;
       margin-left: 50px;
       font-size: large;
@@ -63,9 +63,9 @@
     max-width: 140px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.754);
-    border: 1px solid #6682ed;
-    color: #6682ed;
+    background-color: var(--color-bg-transparent);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,13 +73,13 @@
     font-weight: 400;
     font-size: 13px;
     cursor: pointer;
-    box-shadow: 0 4px 30px #6681ed23;
+    box-shadow: 0 4px 30px var(--color-primary-shadow);
   }
 }
 
 .foot__cards-more:hover {
-  background-color: #6681ed;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
   transition: 0.3s;
 }
 

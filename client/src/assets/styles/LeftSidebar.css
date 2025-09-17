@@ -1,7 +1,7 @@
 .sidebar {
   width: 220px;
-  background-color: #ffffffb6;
-  box-shadow: 4px 0px 30px 0px #6681ed23;
+  background-color: var(--color-bg-transparent);
+  box-shadow: 4px 0px 30px 0px var(--color-primary-shadow);
   backdrop-filter: blur(8.3px);
   -webkit-backdrop-filter: blur(8.3px);
   padding: 4rem 1rem;
@@ -9,16 +9,16 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
-  margin-top: 3.35rem;
+  margin-top: 3.7rem;
   position: fixed;
   top: 0;
   left: 0;
-  height: calc(100% - 3.35rem);
+  height: calc(100% - 3.7rem);
   z-index: 1000 !important;
 }
 
 .sidebar__logo {
-  color: #6682ed;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;

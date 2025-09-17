@@ -3,10 +3,10 @@
   width: 100%;
   background-image: linear-gradient(
     58.08deg,
-    #89cfe8 -11.48%,
-    #e8ebf3 53.54%,
-    #e8ebf3 57.19%,
-    #6682ed 114.92%
+    var(--color-primary-light) -11.48%,
+    var(--color-bg-alt) 53.54%,
+    var(--color-bg-alt) 57.19%,
+    var(--color-primary) 114.92%
   );
   box-sizing: border-box;
 }
@@ -18,7 +18,6 @@
   border-radius: inherit;
   box-sizing: border-box;
 }
-
 
 @media (max-width: 768px) {
   .mainLayout {

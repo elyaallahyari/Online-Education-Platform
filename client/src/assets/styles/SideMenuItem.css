@@ -3,17 +3,15 @@
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
-  color: #686868;
+  color: var(--color-text-muted);
   border-radius: 8px;
   width: 100%;
   min-height: 2.5rem;
   padding: 0.5rem 1rem;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-sizing: border-box;
 }
 
 .menu__icon {
@@ -29,21 +27,16 @@
   text-align: left;
 }
 
-.menu:hover {
-  color: white;
-  background-color: #6682ed;
-}
-
+.menu:hover,
 .active {
-  color: white;
-  background-color: #6682ed;
+  color: var(--color-bg);
+  background-color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
   .menu {
     width: 60px;
   }
-
   .menu__name {
     display: none;
   }
