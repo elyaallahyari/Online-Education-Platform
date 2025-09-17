@@ -27,7 +27,10 @@ const Register = () => {
     try {
       const res = await axiosReq.post('/auth/register', registerData)
       if (res) {
-        Navigate('/login')
+        const code = Math.floor(1000 + Math.random() * 9000)
+        localStorage.setItem('verificationCode', code)
+        alert(`کد وریفیکیشن: ${code}`)
+        Navigate('/verify')
       }
     } catch (err) {
       console.log(err)

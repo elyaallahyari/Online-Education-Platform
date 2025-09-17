@@ -9,6 +9,7 @@ import About from '../pages/dashboard/About'
 import Enter from '../pages/auth/Enter'
 import Login from '../pages/auth/Login'
 import Register from '../pages/auth/Register'
+import VerifyCode from '../pages/auth/VerifyCode'
 
 export const RouteHandler = createBrowserRouter([
   {
@@ -37,5 +38,9 @@ export const RouteHandler = createBrowserRouter([
   {
     path: '/register',
     element: <Register />
+  },
+  {
+    path: '/verify',
+    element: <VerifyCode />
   }
 ])
