@@ -2,7 +2,8 @@
   "home": {
     "title": "Online Education Platform",
     "popular_courses": "Popular courses",
-    "more_btn": "Show more"
+    "more_btn": "Show more",
+    "categories": "Categories"
   },
   "navbar": {
     "mode": "Mode",

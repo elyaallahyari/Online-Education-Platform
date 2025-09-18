@@ -1,0 +1,28 @@
+.category {
+  max-width: 215px;
+  height: 178px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  .category__box {
+    background-color: rgb(241 242 242);
+    border-radius: 8px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img:hover {
+      scale: 1.2;
+    }
+  }
+  .category__box:hover {
+    background-color: #6681ed47;
+    border-radius: 8px;
+  }
+}

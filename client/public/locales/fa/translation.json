@@ -2,7 +2,8 @@
   "home": {
     "title": "پلتفرم آموزش آنلاین",
     "popular_courses": "دوره های پرطرفدار",
-    "more_btn": "نمایش بیشتر"
+    "more_btn": "نمایش بیشتر",
+    "categories": "دسته بندی ها"
   },
   "navbar": {
     "mode": "حالت",

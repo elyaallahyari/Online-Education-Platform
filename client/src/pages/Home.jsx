@@ -11,6 +11,8 @@ import { useTranslation } from 'react-i18next'
 import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
+import CategoriesSection from '../components/CategoriesSection'
+
 const Home = () => {
   const { t } = useTranslation()
 
@@ -34,6 +36,13 @@ const Home = () => {
             </div>
             <div className="head__banner">
               <img src={Banner} alt="Banner of the site" />
+            </div>
+          </div>
+
+          <div className="content_categories">
+            <p>{t('home.categories')}</p>
+            <div className="content_categories-item">
+              <CategoriesSection />
             </div>
           </div>
 
