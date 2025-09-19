@@ -1,91 +1,19 @@
 import React from 'react'
-import Programming_img from '../assets/images/category_programming.svg'
-import Ai_img from '../assets/images/category_Ai.svg'
-import Architecture_img from '../assets/images/category_Architecture.svg'
-import Art_img from '../assets/images/category_Art.svg'
-import Business_img from '../assets/images/category_business.svg'
-import CivilEngineering_img from '../assets/images/category_CivilEngineering.svg'
-import Electronics_img from '../assets/images/category_Electronics.svg'
-import English_img from '../assets/images/category_English.svg'
-import Industry_img from '../assets/images/category_Industry.svg'
-import Math_img from '../assets/images/category_Math.svg'
-import Mecanics_img from '../assets/images/category_Mecanics.svg'
-import Python_img from '../assets/images/category_Python.svg'
-import SoftwareEngineering_img from '../assets/images/category_SoftwareEngineering.svg'
 import CategoryComponent from './CategoryComponent'
+import { useNavigate } from 'react-router-dom'
+import { category } from '../data/categories'
 
 const CategoriesSection = () => {
-  const category = [
-    {
-      id: 1,
-      name: 'Programming',
-      img: Programming_img
-    },
-    {
-      id: 2,
-      name: 'Ai',
-      img: Ai_img
-    },
-    {
-      id: 3,
-      name: 'Architecture',
-      img: Architecture_img
-    },
-    {
-      id: 4,
-      name: 'Art',
-      img: Art_img
-    },
-    {
-      id: 5,
-      name: 'Business',
-      img: Business_img
-    },
-    {
-      id: 6,
-      name: 'Civil Engineering',
-      img: CivilEngineering_img
-    },
-    {
-      id: 7,
-      name: 'Electronics',
-      img: Electronics_img
-    },
-    {
-      id: 8,
-      name: 'English',
-      img: English_img
-    },
-    {
-      id: 9,
-      name: 'Industry',
-      img: Industry_img
-    },
-    {
-      id: 10,
-      name: 'Math',
-      img: Math_img
-    },
-    {
-      id: 11,
-      name: 'Mecanics',
-      img: Mecanics_img
-    },
-    {
-      id: 12,
-      name: 'Python',
-      img: Python_img
-    },
-    {
-      id: 13,
-      name: 'Software Engineering',
-      img: SoftwareEngineering_img
-    }
-  ]
+  const Navigate = useNavigate()
+
+  const handleClick = (id) => {
+    Navigate(`/category/${id}`)
+  }
+
   return (
     <>
       {category.map((item) => (
-        <div key={item.id}>
+        <div key={item.id} onClick={() => handleClick(item.id)}>
           <CategoryComponent name={item.name} image={item.img} />
         </div>
       ))}

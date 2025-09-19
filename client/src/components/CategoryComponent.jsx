@@ -4,14 +4,14 @@ import '../assets/styles/CategoryComponent.css'
 const CategoryComponent = ({ name, image }) => {
   return (
     <>
-      <a className="category">
+      <div className="category">
         <div className="category__box">
-          <img src={image} alt="category image" />
+          <img src={image} alt="category image" style={{ width: '90px', height: '90px' }} />
         </div>
         <div className="category__name">
           <span>{name}</span>
         </div>
-      </a>
+      </div>
     </>
   )
 }

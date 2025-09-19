@@ -10,6 +10,7 @@ import Enter from '../pages/auth/Enter'
 import Login from '../pages/auth/Login'
 import Register from '../pages/auth/Register'
 import VerifyCode from '../pages/auth/VerifyCode'
+import CategoryCourses from '../components/CategoryCourses'
 
 export const RouteHandler = createBrowserRouter([
   {
@@ -42,5 +43,9 @@ export const RouteHandler = createBrowserRouter([
   {
     path: '/verify',
     element: <VerifyCode />
+  },
+  {
+    path: '/category/:id',
+    element: <CategoryCourses />
   }
 ])

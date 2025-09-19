@@ -1,0 +1,31 @@
+.categoryPage {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  h3 {
+    color: var(--color-primary);
+    font-size: 3rem;
+  }
+  .categorySection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.courseItem {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border: 1px solid #6868688c;
+  padding: 1rem;
+  max-width: 90vw;
+  height: 10rem;
+  border-radius: 7px;
+}
+.courseItem:hover {
+  background-color: #6668ed0a;
+  border: 2px solid #6668ed5f;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}

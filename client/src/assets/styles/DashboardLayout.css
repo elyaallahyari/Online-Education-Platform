@@ -1,10 +1,9 @@
 .dashboard__content {
-  background-color: var(--color-bg-soft);
   width: calc(100vw - 13.73rem);
-  height: calc(100vh - 3.35rem);
+  min-height: calc(100vh - 3.35rem);
   display: flex;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 4rem;
   right: 0;
   padding: 4rem;
 }
