@@ -10,6 +10,7 @@ import { IoLanguage } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
 import '../../assets/styles/Login.css'
 import { axiosReq } from '../../services/axios'
+import { toast } from 'react-toastify'
 
 const Login = () => {
   const Navigate = useNavigate()
@@ -22,7 +23,7 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault()
     if (!loginData.email.trim() || !loginData.password.trim()) {
-      alert('Plese Complete all fields!')
+      toast.info('Plese Complete all fields!')
       return
     }
     try {

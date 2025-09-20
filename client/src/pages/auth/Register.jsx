@@ -8,6 +8,7 @@ import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
 import { axiosReq } from '../../services/axios'
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const Navigate = useNavigate()
@@ -29,7 +30,7 @@ const Register = () => {
       if (res) {
         const code = Math.floor(1000 + Math.random() * 9000)
         localStorage.setItem('verificationCode', code)
-        alert(`کد وریفیکیشن: ${code}`)
+        toast.info(`کد وریفیکیشن: ${code}`)
         Navigate('/verify')
       }
     } catch (err) {

@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 const connectDB = require('./config/db')
 const cors = require('cors')
 const authRoutes = require('./routes/authRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 dotenv.config()
 connectDB()
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }))
 
 app.use(express.json())
 app.use('/auth', authRoutes)
+app.use('/users', userRoutes)
 
 app.get('/test', (req, res) => {
   res.send('API is working!')

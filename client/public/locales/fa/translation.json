@@ -22,7 +22,9 @@
     "email": "ایمیل",
     "age": "سن",
     "your_courses": "دوره های من",
-    "logout": "خروج"
+    "logout": "خروج",
+    "no_courses": "درسی نیست..",
+    "see_more": "بیشتر"
   },
   "enter": {
     "welcome": "به پلتفرم آنلاین خوش‌آمدید",

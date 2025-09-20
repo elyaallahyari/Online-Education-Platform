@@ -22,7 +22,9 @@
     "email": "email",
     "age": "age",
     "your_courses": "Your courses",
-    "logout": "Logout"
+    "logout": "Logout",
+    "no_courses": "No Course..",
+    "see_more": "See more"
   },
   "enter": {
     "welcome": "Welcome to online education",

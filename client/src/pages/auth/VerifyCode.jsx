@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import '../../assets/styles/VerifyCode.css'
 
 const VerifyCode = () => {
@@ -22,23 +23,23 @@ const VerifyCode = () => {
     const savedCode = localStorage.getItem('verificationCode')
 
     if (expired) {
-      alert('⏳ زمان کد تموم شده! دوباره کد بگیر.')
+      toast.info('⏳ زمان کد تموم شده! دوباره کد بگیر.')
       return
     }
 
     if (inputCode === savedCode) {
-      alert('✅ تایید شد!')
+      toast.success('تایید شد!')
       localStorage.setItem('verified', true)
       navigate('/login')
     } else {
-      alert('❌ کد اشتباهه')
+      toast.error('کد اشتباهه')
     }
   }
 
   const handleResend = () => {
     const newCode = Math.floor(1000 + Math.random() * 9000)
     localStorage.setItem('verificationCode', newCode)
-    alert(`🔄 کد جدید: ${newCode}`)
+    toast.info(`🔄 کد جدید: ${newCode}`)
     setTimer(60)
     setExpired(false)
   }

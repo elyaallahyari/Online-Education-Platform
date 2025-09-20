@@ -1,11 +1,18 @@
 .dashboard__content {
   width: calc(100vw - 13.73rem);
-  min-height: calc(100vh - 3.35rem);
+  min-height: calc(100vh - 3.37rem);
   display: flex;
   position: absolute;
-  top: 4rem;
+  top: 3.7rem;
   right: 0;
   padding: 4rem;
+  background-image: linear-gradient(
+    58.08deg,
+    var(--color-primary-light) -11.48%,
+    var(--color-bg-alt) 53.54%,
+    var(--color-bg-alt) 57.19%,
+    var(--color-primary) 114.92%
+  );
 }
 
 @media (max-width: 768px) {

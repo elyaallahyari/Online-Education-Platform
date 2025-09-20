@@ -1,0 +1,139 @@
+.profile-background {
+  background-image: linear-gradient(
+    58.08deg,
+    var(--color-primary-light) -11.48%,
+    var(--color-bg-alt) 53.54%,
+    var(--color-bg-alt) 57.19%,
+    var(--color-primary) 114.92%
+  );
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+.profile-back-btn {
+  position: absolute;
+  top: 3rem;
+  left: 13rem;
+  cursor: pointer;
+}
+.profile-courses {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-courses__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  img {
+    background-color: var(--color-primary);
+  }
+}
+
+.profile-courses__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.profile-courses__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-courses__email {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.profile-courses__title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-courses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.profile-courses__card {
+  background: #fafafa;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-courses__card:hover {
+  transform: translateY(-4px);
+}
+
+.profile-courses__img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.profile-courses__content {
+  padding: 1rem;
+}
+
+.profile-courses__category {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #555;
+  background: #e8f0fe;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-courses__course-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.4rem 0;
+  color: #222;
+}
+
+.profile-courses__info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.profile-courses__info .divider {
+  color: #ccc;
+}
+
+.profile-courses__empty {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}
+
+.profile-courses__delete {
+  margin-left: auto;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.profile-courses__delete:hover {
+  color: #c0392b;
+}

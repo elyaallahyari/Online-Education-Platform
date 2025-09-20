@@ -11,6 +11,7 @@ import Login from '../pages/auth/Login'
 import Register from '../pages/auth/Register'
 import VerifyCode from '../pages/auth/VerifyCode'
 import CategoryCourses from '../components/CategoryCourses'
+import ProfileCourses from '../pages/dashboard/profile/ProfileCourses'
 
 export const RouteHandler = createBrowserRouter([
   {
@@ -47,5 +48,9 @@ export const RouteHandler = createBrowserRouter([
   {
     path: '/category/:id',
     element: <CategoryCourses />
+  },
+  {
+    path: '/profile/courses',
+    element: <ProfileCourses />
   }
 ])

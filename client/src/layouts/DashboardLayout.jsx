@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import PublicLayout from './PublicLayout'
 import LeftSidebar from '../components/LeftSidebar'
 import Navbar from '../components/Navbar'
 import { IoLogIn } from 'react-icons/io5'
@@ -37,32 +36,31 @@ const DashboardLayout = () => {
   }, [])
   return (
     <div>
-      <PublicLayout>
-        <Navbar
-          logo_1={<IoInvertMode />}
-          item_1={t('navbar.mode')}
-          logo_2={<IoLanguage />}
-          item_2={t('navbar.lang')}
-          path_3={!isLoggedin && '/enter'}
-          logo_3={isLoggedin ? <CgProfile onClick={profileHandler} /> : <IoLogIn />}
-          item_3={isLoggedin ? <RiArrowDownWideFill /> : t('navbar.enter')}
+      <Navbar
+        logo_1={<IoInvertMode />}
+        item_1={t('navbar.mode')}
+        logo_2={<IoLanguage />}
+        item_2={t('navbar.lang')}
+        path_3={!isLoggedin && '/enter'}
+        logo_3={isLoggedin ? <CgProfile onClick={profileHandler} /> : <IoLogIn />}
+        item_3={isLoggedin ? <RiArrowDownWideFill /> : t('navbar.enter')}
+      />
+      <LeftSidebar />
+
+      {openSidebar && (
+        <RightSidebar
+          userId={user?.id}
+          profile={user?.profile || Profile}
+          fullName={user?.fullName}
+          email={user?.email}
+          age={user?.age}
+          onClick={logoutHandler}
         />
-        <LeftSidebar />
+      )}
 
-        {openSidebar && (
-          <RightSidebar
-            profile={user?.profile || Profile}
-            fullName={user?.fullName}
-            email={user?.email}
-            age={user?.age}
-            onClick={logoutHandler}
-          />
-        )}
-
-        <div className="dashboard__content">
-          <Outlet />
-        </div>
-      </PublicLayout>
+      <div className="dashboard__content">
+        <Outlet />
+      </div>
     </div>
   )
 }

@@ -33,6 +33,7 @@
 
 .course-card__content {
   padding: 15px;
+  position: relative;
 }
 
 .course-card__category {
@@ -73,4 +74,43 @@
   color: #777;
   font-size: 18px;
   padding: 30px 0;
+}
+
+.course-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.6rem;
+  background: linear-gradient(
+    58.08deg,
+    var(--color-primary-light) -11.48%,
+    var(--color-bg-alt) 53.54%,
+    var(--color-bg-alt) 57.19%,
+    var(--color-primary) 114.92%
+  );
+  color: var(--color-text-title);
+  font-size: 12px;
+  font-weight: 900;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
+}
+
+.course-card__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.course-card__btn svg {
+  transition: transform 0.3s ease;
+}
+
+.course-card__btn:hover svg {
+  transform: rotate(20deg);
 }
