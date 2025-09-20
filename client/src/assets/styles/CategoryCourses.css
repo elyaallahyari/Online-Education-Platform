@@ -29,3 +29,20 @@
   border: 2px solid #6668ed5f;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+.courseItem__info {
+  font-size: 10px;
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alignment {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+}
+
+.courseItem__info-line {
+  margin: 0.4rem;
+}

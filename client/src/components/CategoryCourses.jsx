@@ -2,6 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { courses } from '../data/courses'
 import { category } from '../data/categories'
+import { FaGraduationCap } from 'react-icons/fa6'
+import { IoIosClock } from 'react-icons/io'
 import '../assets/styles/CategoryCourses.css'
 
 const CategoryCourses = () => {
@@ -21,8 +23,16 @@ const CategoryCourses = () => {
                 <img src={course.img} style={{ width: '231px', height: '130px' }} />
                 <div>
                   <div>{course.title}</div>
-                  <div>{course.students} students</div>
-                  <div>{course.duration} hours</div>
+                  <div className="courseItem__info">
+                    <span className="alignment">
+                      <FaGraduationCap /> {course.students} Students
+                    </span>
+                    <span className="courseItem__info-line">|</span>
+                    <span className="alignment">
+                      <IoIosClock />
+                      {course.duration} Hours
+                    </span>
+                  </div>
                 </div>
               </li>
             ))}
