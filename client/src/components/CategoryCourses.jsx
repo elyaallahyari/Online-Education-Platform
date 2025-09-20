@@ -4,6 +4,9 @@ import { courses } from '../data/courses'
 import { category } from '../data/categories'
 import { FaGraduationCap } from 'react-icons/fa6'
 import { IoIosClock } from 'react-icons/io'
+import { AiOutlinePlus } from 'react-icons/ai'
+import { toast } from 'react-toastify'
+import { privateRequest } from '../services/axios'
 import '../assets/styles/CategoryCourses.css'
 
 const CategoryCourses = () => {
@@ -11,6 +14,28 @@ const CategoryCourses = () => {
   const categoryId = parseInt(id)
   const categories = category.find((category) => category.id === categoryId)
   const filteredCourses = courses.filter((course) => course.categoryId === categoryId)
+
+  const user = JSON.parse(localStorage.getItem('user'))
+  const userId = user?.id
+
+  const handleAddCourse = async (courseId, title, category, duration, img) => {
+    try {
+      const res = await privateRequest.post(`/users/${userId}/courses`, {
+        courseId,
+        title,
+        category,
+        duration,
+        img
+      })
+
+      if (res.status === 200 || res.status === 201) {
+        toast.success('Course added successfully!')
+      }
+    } catch (error) {
+      console.error('Error adding course:', error)
+      toast.error('Failed to add course.')
+    }
+  }
 
   return (
     <>
@@ -33,6 +58,20 @@ const CategoryCourses = () => {
                       {course.duration} Hours
                     </span>
                   </div>
+                  <button
+                    className="courseItem__btn"
+                    onClick={() =>
+                      handleAddCourse(
+                        course.id,
+                        course.title,
+                        course.category,
+                        course.duration,
+                        course.img
+                      )
+                    }
+                  >
+                    <AiOutlinePlus /> Select Course
+                  </button>
                 </div>
               </li>
             ))}

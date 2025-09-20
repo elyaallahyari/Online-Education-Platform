@@ -23,7 +23,9 @@
   max-width: 90vw;
   height: 10rem;
   border-radius: 7px;
+  position: relative;
 }
+
 .courseItem:hover {
   background-color: #6668ed0a;
   border: 2px solid #6668ed5f;
@@ -45,4 +47,30 @@
 
 .courseItem__info-line {
   margin: 0.4rem;
+}
+
+.courseItem__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.6rem;
+  background: linear-gradient(
+    58.08deg,
+    var(--color-primary-light) -11.48%,
+    var(--color-bg-alt) 53.54%,
+    var(--color-bg-alt) 57.19%,
+    var(--color-primary) 114.92%
+  );
+  color: var(--color-text-title);
+  font-size: 12px;
+  font-weight: 900;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
 }
