@@ -12,10 +12,10 @@
 }
 
 .course-card {
-  background: #fff;
+  background: var(--color-bg);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--color-primary-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
@@ -31,7 +31,7 @@
   object-fit: cover;
 }
 
-.course-card__info {
+.course-card__content {
   padding: 15px;
 }
 
@@ -47,8 +47,25 @@
 .course-card__title {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text-title);
   line-height: 1.4;
+}
+
+.course-card__info {
+  font-size: 10px;
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alignment {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+}
+
+.course-card__info-line {
+  margin: 0.4rem;
 }
 
 .no-course {

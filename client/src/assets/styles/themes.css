@@ -10,6 +10,7 @@
 
   --color-text: #646464;
   --color-text-muted: #686868;
+  --color-text-title: #333;
 
   --color-danger: #d68d8d;
 }
@@ -26,6 +27,7 @@
 
   --color-text: #f5f5f5;
   --color-text-muted: #b5b5b5;
+  --color-text-title: #f4f4f4;
 
   --color-danger: #e99b9b;
 }

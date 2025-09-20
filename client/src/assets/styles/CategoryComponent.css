@@ -7,9 +7,10 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  color: var(--color-text-title);
 
   .category__box {
-    background-color: rgb(241 242 242);
+    background-color: var(--color-bg-transparent);
     border-radius: 8px;
     padding: 0.8rem;
     display: flex;
@@ -22,7 +23,7 @@
     }
   }
   .category__box:hover {
-    background-color: #6681ed47;
+    background-color: var(--color-primary-shadow);
     border-radius: 8px;
   }
 }
