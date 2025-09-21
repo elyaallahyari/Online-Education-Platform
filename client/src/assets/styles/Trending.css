@@ -1,0 +1,15 @@
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .trending__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+      width: 332px;
+      height: 225px;
+    }
+  }
+}
