@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema(
         duration: { type: Number },
         img: { type: String }
       }
-    ]
+    ],
+    role: { type: String, enum: ['user', 'admin'], default: 'user' }
   },
   { timestamps: true }
 )

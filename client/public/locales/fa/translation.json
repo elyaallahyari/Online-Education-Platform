@@ -44,5 +44,11 @@
     "email": "ایمیل",
     "password": "رمز عبور",
     "button": "ثبت‌ نام"
+  },
+  "login_admin": {
+    "title": "ورود ادمین",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "button": "ورود"
   }
 }

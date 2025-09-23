@@ -44,5 +44,11 @@
     "email": "email",
     "password": "password",
     "button": "Register"
+  },
+  "login_admin": {
+    "title": "Login Admin",
+    "email": "email",
+    "password": "password",
+    "button": "Login"
   }
 }

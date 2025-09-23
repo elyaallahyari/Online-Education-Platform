@@ -12,11 +12,16 @@ import Register from '../pages/auth/Register'
 import VerifyCode from '../pages/auth/VerifyCode'
 import CategoryCourses from '../components/CategoryCourses'
 import ProfileCourses from '../pages/dashboard/profile/ProfileCourses'
+import Login_admin from '../pages/admin/Login_admin'
 
 export const RouteHandler = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/admin',
+    element: <Login_admin />
   },
   {
     path: '/dashboard',
