@@ -29,11 +29,6 @@ privateRequest.interceptors.request.use(
   }
 )
 
-// export const getUserCourses = (userId) => privateRequest.get(`/users/${userId}/courses`)
-// export const addCourseToUser = (userId, courseId) =>
-//   privateRequest.post(`/users/${userId}/courses`, { courseId })
-
-
 privateRequest.interceptors.response.use(
   (response) => response,
   (error) => {

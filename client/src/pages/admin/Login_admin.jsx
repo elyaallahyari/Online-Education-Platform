@@ -31,7 +31,7 @@ const Login_admin = () => {
       if (res) {
         localStorage.setItem('token', res.data.data.token)
         localStorage.setItem('user', JSON.stringify(res.data.data))
-        Navigate('/dashboard')
+        Navigate('/admin/dashboard')
       }
     } catch (err) {
       console.log(err)
