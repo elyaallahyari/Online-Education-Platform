@@ -39,12 +39,26 @@ exports.getReports = async (req, res) => {
       popularCourses = sortedCourses.slice(0, 5)
     }
 
+    // -------- Users with their courses --------
+    const usersWithCourses = allUsers.map((u) => ({
+      fullName: u.fullName,
+      email: u.email,
+      selectedCourses: u.selectedCourses.map((c) => ({
+        courseId: c.courseId,
+        title: c.title,
+        category: c.category,
+        duration: c.duration,
+        img: c.img
+      }))
+    }))
+
     res.json({
       totalUsers,
       totalCoursesSelected,
       mostActiveUser,
       mostPopularCourse,
-      popularCourses
+      popularCourses,
+      usersWithCourses
     })
   } catch (error) {
     res.status(500).json({ msg: 'Server error', error })
