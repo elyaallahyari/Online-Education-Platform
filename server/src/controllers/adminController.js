@@ -12,10 +12,10 @@ exports.getReports = async (req, res) => {
     let mostActiveUser = null
     if (allUsers.length > 0) {
       mostActiveUser = allUsers
-        .map((u) => ({
-          fullName: u.fullName,
-          email: u.email,
-          count: u.selectedCourses.length
+        .map((item) => ({
+          fullName: item.fullName,
+          email: item.email,
+          count: item.selectedCourses.length
         }))
         .sort((a, b) => b.count - a.count)[0]
     }
