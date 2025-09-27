@@ -31,8 +31,8 @@ const AdminCourses = () => {
       <h1 className="admin-title">Users & Their Courses</h1>
 
       {report.usersWithCourses && report.usersWithCourses.length > 0 ? (
-        report.usersWithCourses.map((user, idx) => (
-          <div key={idx} className="user-section">
+        report.usersWithCourses.map((user, index) => (
+          <div key={index} className="user-section">
             <div className="user-header">
               <h2>{user.fullName}</h2>
               <p>{user.email}</p>
