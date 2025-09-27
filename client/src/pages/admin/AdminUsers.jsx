@@ -115,9 +115,9 @@ const AdminUsers = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((u) =>
-            editingUser && editingUser._id === u._id ? (
-              <tr key={u._id}>
+          {users.map((item) =>
+            editingUser && editingUser._id === item._id ? (
+              <tr key={item._id}>
                 <td>
                   <input
                     type="text"
@@ -158,16 +158,16 @@ const AdminUsers = () => {
                 </td>
               </tr>
             ) : (
-              <tr key={u._id}>
-                <td>{u.fullName}</td>
-                <td>{u.email}</td>
-                <td>{u.role}</td>
-                <td>{u.age}</td>
+              <tr key={item._id}>
+                <td>{item.fullName}</td>
+                <td>{item.email}</td>
+                <td>{item.role}</td>
+                <td>{item.age}</td>
                 <td>
-                  <button onClick={() => handleEditClick(u)} className="action-btn edit">
+                  <button onClick={() => handleEditClick(item)} className="action-btn edit">
                     Edit
                   </button>
-                  <button onClick={() => handleDeleteUser(u._id)} className="action-btn delete">
+                  <button onClick={() => handleDeleteUser(item._id)} className="action-btn delete">
                     Delete
                   </button>
                 </td>
