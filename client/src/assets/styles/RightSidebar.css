@@ -64,7 +64,7 @@
 
 .course__item {
   background: linear-gradient(90deg, #6366f1, #818cf8);
-  color: #fff;
+  color: var(--color-bg);
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 0.875rem;

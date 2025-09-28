@@ -1,4 +1,3 @@
-/* کانتینر کلی */
 .verify-container {
   display: flex;
   justify-content: center;
@@ -8,18 +7,16 @@
   padding: 20px;
 }
 
-/* کارت اصلی */
 .verify-card {
-  background: #fff;
+  background: var(--color-bg);
   padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
   text-align: center;
 }
 
-/* عنوان */
 .verify-title {
   font-size: 22px;
   font-weight: bold;
@@ -27,21 +24,18 @@
   color: #333;
 }
 
-/* زیرنویس */
 .verify-subtitle {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
 }
 
-/* فرم */
 .verify-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* ورودی */
 .verify-input {
   padding: 12px;
   font-size: 16px;
@@ -56,10 +50,9 @@
   box-shadow: 0 0 5px rgba(79, 70, 229, 0.4);
 }
 
-/* دکمه تایید */
 .verify-btn {
   background: #4f46e5;
-  color: #fff;
+  color: var(--color-bg);
   border: none;
   padding: 12px;
   font-size: 16px;
@@ -72,14 +65,12 @@
   background: #4338ca;
 }
 
-/* تایمر */
 .verify-timer {
   margin-top: 20px;
   font-size: 14px;
   color: #444;
 }
 
-/* دکمه ارسال مجدد */
 .resend-btn {
   background: none;
   border: 1px solid #4f46e5;
@@ -92,10 +83,9 @@
 
 .resend-btn:hover {
   background: #4f46e5;
-  color: #fff;
+  color: var(--color-bg);
 }
 
-/* ریسپانسیو */
 @media (max-width: 480px) {
   .verify-card {
     padding: 20px;

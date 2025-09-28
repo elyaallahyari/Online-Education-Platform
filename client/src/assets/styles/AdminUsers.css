@@ -70,7 +70,7 @@
 
 .users-table th {
   background: var(--color-primary-light);
-  color: #fff;
+  color: var(--color-bg);
   font-weight: bold;
 }
 
