@@ -55,7 +55,6 @@
   color: var(--color-primary);
 }
 
-/* واکنش‌گرا برای موبایل */
 @media (max-width: 900px) {
   .admin-sidebar {
     width: 100%;

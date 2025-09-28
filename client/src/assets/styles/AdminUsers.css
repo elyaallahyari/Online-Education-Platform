@@ -52,7 +52,6 @@
   background: var(--color-primary-light);
 }
 
-/* جدول کاربران */
 .users-table {
   width: 100%;
   border-collapse: collapse;
