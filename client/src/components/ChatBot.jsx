@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AiFillWechat } from 'react-icons/ai'
 import '../assets/styles/Chatbot.css'
 
 const Chatbot = () => {
@@ -39,7 +40,7 @@ const Chatbot = () => {
     <div className="chatbot-container">
       {!isOpen && (
         <button className="chatbot-toggle" onClick={toggleChat}>
-          💬
+          <AiFillWechat />
         </button>
       )}
 
@@ -74,7 +75,7 @@ const Chatbot = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
             />
-            <button onClick={sendMessage}>ارسال</button>
+            <button onClick={sendMessage}>Send</button>
           </div>
         </div>
       )}
