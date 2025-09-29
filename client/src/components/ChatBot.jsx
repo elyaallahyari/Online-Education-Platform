@@ -1,57 +1,85 @@
-// import React, { useState } from 'react'
-// import './chatbot.css'
+import React, { useState } from 'react'
+import '../assets/styles/Chatbot.css'
 
-// const ChatBot = () => {
-//   const [messages, setMessages] = useState([
-//     { sender: 'bot', text: 'سلام! چطور می‌تونم کمکت کنم؟' }
-//   ])
-//   const [input, setInput] = useState('')
-//   const [isTyping, setIsTyping] = useState(false)
+const Chatbot = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [messages, setMessages] = useState([])
+  const [input, setInput] = useState('')
+  const [loading, setLoading] = useState(false)
 
-//   const sendMessage = async () => {
-//     if (!input.trim()) return
+  const toggleChat = () => setIsOpen(!isOpen)
 
-//     const newMsg = { sender: 'user', text: input }
-//     setMessages([...messages, newMsg])
-//     setInput('')
-//     setIsTyping(true)
+  const sendMessage = async () => {
+    if (!input.trim()) return
 
-//     try {
-//       const res = await fetch('http://localhost:5000/api/chat', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ message: input })
-//       })
-//       const data = await res.json()
+    const newMessage = { sender: 'user', text: input }
+    setMessages((prev) => [...prev, newMessage])
+    setInput('')
+    setLoading(true)
 
-//       setMessages((prev) => [...prev, { sender: 'bot', text: data.reply }])
-//     } catch {
-//       setMessages((prev) => [...prev, { sender: 'bot', text: 'خطا در ارتباط با سرور!' }])
-//     }
-//     setIsTyping(false)
-//   }
+    try {
+      const res = await fetch('http://localhost:4000/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input })
+      })
 
-//   return (
-//     <div className="chatbot">
-//       <div className="chat-window">
-//         {messages.map((msg, i) => (
-//           <div key={i} className={`msg ${msg.sender}`}>
-//             {msg.text}
-//           </div>
-//         ))}
-//         {isTyping && <div className="msg bot">در حال تایپ...</div>}
-//       </div>
-//       <div className="chat-input">
-//         <input
-//           type="text"
-//           value={input}
-//           onChange={(e) => setInput(e.target.value)}
-//           placeholder="پیام خود را بنویسید..."
-//         />
-//         <button onClick={sendMessage}>ارسال</button>
-//       </div>
-//     </div>
-//   )
-// }
+      const data = await res.json()
+      const botMessage = { sender: 'bot', text: data.reply }
 
-// export default ChatBot
+      setMessages((prev) => [...prev, botMessage])
+    } catch (error) {
+      console.error('خطا در ارسال پیام:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className="chatbot-container">
+      {!isOpen && (
+        <button className="chatbot-toggle" onClick={toggleChat}>
+          💬
+        </button>
+      )}
+
+      {isOpen && (
+        <div className="chatbot-box">
+          <div className="chatbot-header">
+            <h3>Chatbot</h3>
+            <button onClick={toggleChat}>✖</button>
+          </div>
+
+          <div className="chatbot-messages">
+            {messages.map((msg, idx) => (
+              <div key={idx} className={`chat-message ${msg.sender === 'user' ? 'user' : 'bot'}`}>
+                {msg.text}
+              </div>
+            ))}
+
+            {loading && (
+              <div className="chat-message bot typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
+          </div>
+
+          <div className="chatbot-input">
+            <input
+              type="text"
+              value={input}
+              placeholder="Ask anything.."
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+            />
+            <button onClick={sendMessage}>ارسال</button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default Chatbot

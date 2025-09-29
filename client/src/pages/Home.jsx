@@ -12,6 +12,7 @@ import { VscRemoteExplorer } from 'react-icons/vsc'
 import { IoInvertMode } from 'react-icons/io5'
 import { IoLanguage } from 'react-icons/io5'
 import CategoriesSection from '../components/CategoriesSection'
+import Chatbot from '../components/ChatBot'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -75,6 +76,9 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          
+          <Chatbot />
         </div>
       </PublicLayout>
     </>
