@@ -1,4 +1,8 @@
 import React from 'react'
+import { GiWorld } from 'react-icons/gi'
+import { GiTakeMyMoney } from 'react-icons/gi'
+import { GiFlexibleLamp } from 'react-icons/gi'
+import { MdOutlineWork } from 'react-icons/md'
 
 const About = () => {
   return (
@@ -13,7 +17,9 @@ const About = () => {
           </p>
         </div>
         <div className="about__content content">
-          <div className="content__image"></div>
+          <div className="content__image">
+            <GiWorld />
+          </div>
           <div className="content__title">World-class</div>
           <div className="content__text">
             <p>Learn from experts at 350+ leading universities and companies.</p>
@@ -23,7 +29,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="content__image"></div>
+          <div className="content__image">
+            <GiTakeMyMoney />
+          </div>
           <div className="content__title">Affordable</div>
           <div className="content__text">
             <p>Explore hundreds of free courses or get started with a free trial.</p>
@@ -33,7 +41,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="content__image"></div>
+          <div className="content__image">
+            <GiFlexibleLamp />
+          </div>
           <div className="content__title">Flexible</div>
           <div className="content__text">
             <p>Get on-demand lectures for desktop and mobile—on your schedule.</p>
@@ -43,7 +53,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="content__image"></div>
+          <div className="content__image">
+            <MdOutlineWork />
+          </div>
           <div className="content__title">Job-relevant</div>
           <div className="content__text">
             <p>Master essential career skills based on comprehensive skills data.</p>
