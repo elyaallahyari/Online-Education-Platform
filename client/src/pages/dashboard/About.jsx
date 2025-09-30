@@ -19,7 +19,7 @@ const About = () => {
         <div className="about__content">
           <div className="content">
             <div className="content__image">
-              <GiWorld />
+              <GiWorld size={'10rem'} />
             </div>
             <div className="content__title">World-class</div>
             <div className="content__text">
@@ -33,7 +33,7 @@ const About = () => {
 
           <div className="content">
             <div className="content__image">
-              <GiTakeMyMoney />
+              <GiTakeMyMoney size={'10rem'} />
             </div>
             <div className="content__title">Affordable</div>
             <div className="content__text">
@@ -47,7 +47,7 @@ const About = () => {
 
           <div className="content">
             <div className="content__image">
-              <GiFlexibleLamp />
+              <GiFlexibleLamp size={'10rem'} />
             </div>
             <div className="content__title">Flexible</div>
             <div className="content__text">
@@ -61,7 +61,7 @@ const About = () => {
 
           <div className="content">
             <div className="content__image">
-              <MdOutlineWork />
+              <MdOutlineWork size={'9rem'} />
             </div>
             <div className="content__title">Job-relevant</div>
             <div className="content__text">
