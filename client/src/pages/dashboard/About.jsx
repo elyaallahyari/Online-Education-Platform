@@ -12,6 +12,17 @@ const About = () => {
             worldwide.
           </p>
         </div>
+        <div className="about__content">
+          <div className="content__image"></div>
+          <div className="content__title">World-class</div>
+          <div className="content__text">
+            <p>Learn from experts at 350+ leading universities and companies.</p>
+            <p>
+              Earn recognized credentials from leading universities and companies to achieve your
+              goals.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   )
