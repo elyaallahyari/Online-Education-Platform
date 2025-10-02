@@ -50,5 +50,17 @@
     "email": "email",
     "password": "password",
     "button": "Login"
+  },
+  "About": {
+    "title_1": "World-Class Learning for Anyone, Anywhere",
+    "title_2": "Coursera partners with more than 350+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.",
+    "Card_1_description1": "Learn from experts at 350+ leading universities and companies.",
+    "Card_1_description2": "Earn recognized credentials from leading universities and companies to achieve your goals.",
+    "Card_2_description1": "Explore hundreds of free courses or get started with a free trial.",
+    "Card_2_description2": "Earn a university degree and enjoy high-quality curriculum, affordable pricing, and flexible scheduling.",
+    "Card_3_description1": "Get on-demand lectures for desktop and mobile—on your schedule.",
+    "Card_3_description2": "Choose from free courses, hands-on projects, certificate programs, and stackable credentials.",
+    "Card_4_description1": "Master essential career skills based on comprehensive skills data.",
+    "Card_4_description2": "Master essential career skills based on comprehensive skills data."
   }
 }
