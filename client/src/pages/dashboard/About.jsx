@@ -3,8 +3,12 @@ import { GiWorld } from 'react-icons/gi'
 import { GiTakeMyMoney } from 'react-icons/gi'
 import { GiFlexibleLamp } from 'react-icons/gi'
 import { MdOutlineWork } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
 import '../../assets/styles/About.css'
+
 const About = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <div className="about">
